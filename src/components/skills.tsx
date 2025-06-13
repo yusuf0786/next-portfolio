@@ -39,18 +39,18 @@ export default function Skills() {
 
   const technicalSkills = [
     { name: "HTML/CSS", percentage: 95 },
-    { name: "JavaScript", percentage: 90 },
-    { name: "React", percentage: 85 },
-    { name: "Next.js", percentage: 80 },
-    { name: "TypeScript", percentage: 75 },
-    { name: "Node.js", percentage: 70 },
+    { name: "JavaScript", percentage: 95 },
+    { name: "React", percentage: 95 },
+    { name: "Next.js", percentage: 95 },
+    { name: "TypeScript", percentage: 85 },
+    { name: "TaiulwindCSS", percentage: 85 },
   ]
 
   const softSkills = [
     { name: "Communication", percentage: 90 },
-    { name: "Teamwork", percentage: 85 },
+    { name: "Teamwork", percentage: 90 },
     { name: "Problem Solving", percentage: 95 },
-    { name: "Time Management", percentage: 80 },
+    { name: "Time Management", percentage: 90 },
   ]
 
   return (
@@ -60,7 +60,7 @@ export default function Skills() {
       className="py-20 bg-gray-50 dark:bg-gray-900 opacity-0 transition-opacity duration-1000"
     >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 dark:text-[#fdfdfd80]">My Skills</h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
           <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -68,8 +68,9 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-12"> */}
+        <div className="grid grid-cols-1 gap-12">
+          <div className="hidden">
             <h3 className="text-2xl font-bold mb-6 dark:text-[#fdfdfd80]">Technical Skills</h3>
             <div className="space-y-6">
               {technicalSkills.map((skill, index) => (
@@ -91,7 +92,7 @@ export default function Skills() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold mb-6 dark:text-[#fdfdfd80]">Soft Skills</h3>
+            {/* <h3 className="text-2xl font-bold mb-6 dark:text-[#fdfdfd80]">Soft Skills</h3>
             <div className="space-y-6">
               {softSkills.map((skill, index) => (
                 <div key={index}>
@@ -108,7 +109,7 @@ export default function Skills() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
 
             <div className="mt-12">
               <h3 className="text-2xl font-bold mb-6 dark:text-[#fdfdfd80]">Tools & Technologies</h3>

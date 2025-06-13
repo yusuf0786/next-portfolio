@@ -85,10 +85,11 @@ export default function Projects() {
           {projects.map((project, index) => (
             <Card key={index} className="overflow-hidden group">
                 <Image
+                width={100}
+                height={100}
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover w-full h-auto transition-transform duration-500 group-hover:scale-105"
                   style={{ objectFit: "cover" }}
                   sizes="(max-width: 768px) 100vw, 50vw"
                   priority={index === 0}
