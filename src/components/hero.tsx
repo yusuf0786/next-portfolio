@@ -42,7 +42,7 @@ export default function Hero() {
       className="min-h-screen flex items-center justify-center relative opacity-0 transition-opacity duration-1000"
       style={{
         backgroundImage:
-          "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/placeholder.svg?height=1080&width=1920')",
+          "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/portfolio-banner.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -52,19 +52,19 @@ export default function Hero() {
           Hello, I'm <span className="text-primary">Yusuf Ansari</span>
         </h1>
         <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-          A passionate front End Web Developer creating beautiful and functional web apps
+          A passionate front End Web Developer creating mesmerizing and functional web apps
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button size="lg" onClick={scrollToAbout} className="px-8 border hover:border-black hover:bg-black cursor-pointer duration-300">
             View My Work
           </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="px-8 border-white text-black hover:bg-white hover:text-primary"
+          <a
+            className="px-8 bg-gray-400 border-white text-black hover:bg-white hover:text-primary border rounded-lg py-2 text-lg font-medium transition-colors duration-300 inline-block"
+            href="/resume - Yusuf Ansari.pdf"
+            download
           >
             Download CV
-          </Button>
+          </a>
         </div>
       </div>
 

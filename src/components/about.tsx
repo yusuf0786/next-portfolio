@@ -50,9 +50,7 @@ export default function About() {
           <div>
             <h3 className="text-2xl font-bold mb-4 dark:text-[#fdfdfd80]">Who am I?</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              I'm a passionate web developer with over 5 years of experience creating modern and responsive websites. I
-              specialize in front-end development using React and Next.js, with a strong foundation in UI/UX design
-              principles.
+              Hi! I'm a Front-End Web Developer with 3 years of experience building responsive, user-friendly websites and web applications. I specialize in HTML5, CSS3, JavaScript, and modern tools like React.js, Next.js, and TypeScript. I'm also skilled in using frameworks and libraries like Bootstrap, TailwindCSS, jQuery, and Sass. I enjoy turning design ideas into clean, functional code and working with Git and GitHub for version control.
             </p>
             <p className="text-gray-600 dark:text-gray-300 mb-8">
               My goal is to build applications that are not only visually appealing but also highly functional and
@@ -61,31 +59,31 @@ export default function About() {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Card>
+              <Card className="border border-gray-500 dark:border-[#fdfdfd80]">
                 <CardContent className="p-4 flex items-center gap-3 dark:text-white">
                   <User className="text-primary" size={20} />
                   <span>Yusuf Ansari</span>
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border border-gray-500 dark:border-[#fdfdfd80]">
                 <CardContent className="p-4 flex items-center gap-3 dark:text-white">
                   <Mail className="text-primary" size={20} />
-                  <span>email@example.com</span>
+                  <a href="mailto:yusssuf0786@gmail.com">yusssuf0786@gmail.com</a>
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border border-gray-500 dark:border-[#fdfdfd80]">
                 <CardContent className="p-4 flex items-center gap-3 dark:text-white">
                   <MapPin className="text-primary" size={20} />
-                  <span>Your Location</span>
+                  <span>Mumbai, Maharashtra, India</span>
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border border-gray-500 dark:border-[#fdfdfd80]">
                 <CardContent className="p-4 flex items-center gap-3 dark:text-white">
                   <Calendar className="text-primary" size={20} />
-                  <span>Available for Freelance</span>
+                  <span>Available for Job</span>
                 </CardContent>
               </Card>
             </div>

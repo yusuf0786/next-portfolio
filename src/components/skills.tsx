@@ -128,6 +128,10 @@ export default function Skills() {
                   "NextJS",
                   "Git",
                   "Github",
+                  "Effective Communication",
+                  "Teamwork",
+                  "Problem Solving",
+                  "Time Management",
                 ].map((tool, index) => (
                   <div
                     key={index}
