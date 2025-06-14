@@ -1,3 +1,5 @@
+// lib/projects.ts
+
 export interface Project {
   id: string
   title: string
@@ -21,12 +23,13 @@ export const projectCategories = [
 
 export type ProjectCategory = (typeof projectCategories)[number]
 
+// --- Project Data ---
 export const projects: Project[] = [
   {
     id: "ecommerce-platform",
     title: "E-commerce Platform",
     description:
-      "A full-featured e-commerce platform built with Next.js, featuring product listings, cart functionality, payment processing with Stripe, user authentication, order management, and an admin dashboard. The platform includes advanced features like product search, filtering, reviews, and real-time inventory management.",
+      "A full-featured e-commerce platform built with Next.js, featuring product listings, cart functionality, payment processing with Stripe, user authentication, order management, and an admin dashboard.",
     image: "/placeholder.svg?height=600&width=800",
     tags: ["Next.js", "React", "Tailwind CSS", "Stripe", "PostgreSQL", "Prisma"],
     category: "E-commerce",
@@ -37,7 +40,7 @@ export const projects: Project[] = [
     id: "portfolio-website",
     title: "Portfolio Website",
     description:
-      "A responsive portfolio website showcasing projects and skills, built with modern web technologies. Features include smooth scrolling navigation, animated sections, contact form with email integration, and a blog section. The site is optimized for performance and SEO.",
+      "A responsive portfolio website showcasing projects and skills, built with modern web technologies like Next.js and Tailwind CSS.",
     image: "/placeholder.svg?height=600&width=800",
     tags: ["React", "Tailwind CSS", "Framer Motion", "Next.js"],
     category: "Web Development",
@@ -48,7 +51,7 @@ export const projects: Project[] = [
     id: "task-management-app",
     title: "Task Management App",
     description:
-      "A productivity application for managing tasks and projects with drag-and-drop functionality. Features include team collaboration, real-time updates, file attachments, time tracking, and detailed analytics. Built with modern technologies for optimal performance.",
+      "A productivity app for managing tasks and projects with real-time collaboration, file attachments, and analytics.",
     image: "/placeholder.svg?height=600&width=800",
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Socket.io"],
     category: "Dashboard",
@@ -59,7 +62,7 @@ export const projects: Project[] = [
     id: "weather-dashboard",
     title: "Weather Dashboard",
     description:
-      "A comprehensive weather application that displays current and forecasted weather data for any location worldwide. Features include interactive maps, weather alerts, historical data, and customizable widgets. The app uses multiple weather APIs for accurate data.",
+      "An app showing weather forecasts, alerts, and maps with integration of various weather APIs and Chart.js.",
     image: "/placeholder.svg?height=600&width=800",
     tags: ["React", "API Integration", "Chart.js", "Mapbox", "TypeScript"],
     category: "Dashboard",
@@ -70,7 +73,7 @@ export const projects: Project[] = [
     id: "social-media-app",
     title: "Social Media App",
     description:
-      "A modern social media platform with real-time messaging, post sharing, and user interactions. Features include image/video uploads, story functionality, live notifications, and advanced privacy controls. Built with scalability and performance in mind.",
+      "A scalable social media platform with real-time chat, media uploads, notifications, and advanced privacy settings.",
     image: "/placeholder.svg?height=600&width=800",
     tags: ["Next.js", "Socket.io", "MongoDB", "Cloudinary", "Redis"],
     category: "Social Media",
@@ -81,7 +84,7 @@ export const projects: Project[] = [
     id: "learning-platform",
     title: "Learning Platform",
     description:
-      "An online learning management system with course creation, video streaming, quizzes, and progress tracking. Features include interactive assignments, discussion forums, certificates, and payment integration for course purchases.",
+      "An online LMS with course creation, quizzes, video streaming, and payment integration using Stripe.",
     image: "/placeholder.svg?height=600&width=800",
     tags: ["Next.js", "Video.js", "Stripe", "PostgreSQL", "AWS S3"],
     category: "Education",
@@ -92,7 +95,7 @@ export const projects: Project[] = [
     id: "mobile-banking-app",
     title: "Mobile Banking App",
     description:
-      "A secure mobile banking application with account management, money transfers, bill payments, and investment tracking. Features include biometric authentication, real-time notifications, and comprehensive financial analytics.",
+      "A secure mobile banking app with authentication, money transfers, bill payments, and financial analytics.",
     image: "/placeholder.svg?height=600&width=800",
     tags: ["React Native", "TypeScript", "Node.js", "MongoDB", "JWT"],
     category: "Mobile App",
@@ -103,7 +106,7 @@ export const projects: Project[] = [
     id: "restaurant-website",
     title: "Restaurant Website",
     description:
-      "A modern restaurant website with online menu, table reservations, and food ordering system. Features include interactive menu with dietary filters, real-time availability, and integration with payment systems.",
+      "Modern website for a restaurant with a menu, reservation system, and online ordering integrated with Stripe.",
     image: "/placeholder.svg?height=600&width=800",
     tags: ["Next.js", "Tailwind CSS", "Stripe", "Sanity CMS"],
     category: "Web Development",
@@ -112,13 +115,13 @@ export const projects: Project[] = [
   },
 ]
 
+// --- Get Project by ID ---
 export function getProjectById(id: string): Project | undefined {
   return projects.find((project) => project.id === id)
 }
 
+// --- Get Projects by Category ---
 export function getProjectsByCategory(category: ProjectCategory): Project[] {
-  if (category === "All") {
-    return projects
-  }
+  if (category === "All") return projects
   return projects.filter((project) => project.category === category)
 }

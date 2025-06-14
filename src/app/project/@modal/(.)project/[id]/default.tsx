@@ -8,19 +8,18 @@ import { Card, CardContent } from "@/components/ui/card"
 import { getProjectById } from "@/lib/projects"
 import Image from "next/image"
 
-interface ProjectModalProps {
+interface PageProps {
   params: {
     id: string
   }
 }
 
-export default function ProjectModal({ params }: ProjectModalProps) {
+export default function ProjectModal({ params }: PageProps) {
   const router = useRouter()
   const modalRef = useRef<HTMLDivElement>(null)
   const project = getProjectById(params.id)
 
   useEffect(() => {
-    // Prevent body scroll when modal is open
     document.body.style.overflow = "hidden"
 
     const handleEscape = (e: KeyboardEvent) => {
@@ -39,7 +38,6 @@ export default function ProjectModal({ params }: ProjectModalProps) {
     document.addEventListener("mousedown", handleClickOutside)
 
     return () => {
-      // Restore body scroll when modal is closed
       document.body.style.overflow = "unset"
       document.removeEventListener("keydown", handleEscape)
       document.removeEventListener("mousedown", handleClickOutside)
@@ -68,14 +66,14 @@ export default function ProjectModal({ params }: ProjectModalProps) {
             </Button>
 
             <div className="aspect-video overflow-hidden rounded-t-lg relative">
-                <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    priority
-                  />
+              <Image
+                src={project.image || "/placeholder.svg"}
+                alt={project.title}
+                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                priority
+              />
               <div className="absolute top-4 left-4">
                 <span className="bg-primary/90 text-primary-foreground text-sm font-medium px-3 py-1 rounded-full flex items-center gap-1">
                   <Tag size={14} />
@@ -87,7 +85,6 @@ export default function ProjectModal({ params }: ProjectModalProps) {
 
           <div className="p-6">
             <h2 className="text-3xl font-bold mb-4">{project.title}</h2>
-
             <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">{project.description}</p>
 
             <div className="mb-6">
