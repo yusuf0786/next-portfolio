@@ -44,7 +44,7 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <a href="#" className={`text-2xl font-bold ${
-        isScrolled ? "dark:text-white" : "text-white"
+        isScrolled ? "dark:text-white" : "text-[#a6a6a6]"
         }`} >
           Portfolio
         </a>
@@ -55,7 +55,7 @@ export default function Header() {
             <button
               key={item}
               onClick={() => scrollToSection(item)}
-              className="text-base font-medium hover:text-primary transition-colors capitalize text-white cursor-pointer"
+              className={`text-base font-medium hover:text-primary transition-colors capitalize cursor-pointer ${isScrolled ? "dark:text-white" : "text-[#a6a6a6]"}`}
             >
               {item}
             </button>
@@ -63,7 +63,7 @@ export default function Header() {
         </nav>
 
         {/* Mobile Navigation Toggle */}
-        <Button variant="ghost" size="icon" className={`md:hidden ${isScrolled ? "dark:text-white" : "text-white"} ${isMenuOpen ? "border" : ""}`} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <Button variant="ghost" size="icon" className={`md:hidden ${isScrolled ? "dark:text-white" : "text-[#a6a6a6]"} ${isMenuOpen ? "border" : ""}`} onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </Button>
       </div>
